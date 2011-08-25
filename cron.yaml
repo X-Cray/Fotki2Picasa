@@ -1,0 +1,4 @@
+cron:
+- description: Check all users who requested moving photos
+  url: /move-photos
+  schedule: every 1 minutes
