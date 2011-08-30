@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Working/Programming/Python/fotki2picasa/mover/verify.py</string>
+	<string>mover/urls.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -40,14 +40,32 @@
 			<key>filename</key>
 			<string>urls.py</string>
 			<key>lastUsed</key>
-			<date>2011-08-30T21:50:50Z</date>
+			<date>2011-08-30T22:04:26Z</date>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>templates</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>templates</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>static</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>selected</key>
+			<true/>
+			<key>sourceDirectory</key>
+			<string>static</string>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/__init__.py</key>
+		<key>mover/__init__.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -61,7 +79,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/common.py</key>
+		<key>mover/common.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -75,7 +93,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/data.py</key>
+		<key>mover/data.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -89,7 +107,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/index.py</key>
+		<key>mover/index.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -103,7 +121,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/login_google.py</key>
+		<key>mover/login_google.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -117,7 +135,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/login_yandex.py</key>
+		<key>mover/login_yandex.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -131,7 +149,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/main.py</key>
+		<key>mover/main.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -145,21 +163,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/models.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/move_photos.py</key>
+		<key>mover/models.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -173,21 +177,91 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/templates/main.html</key>
+		<key>mover/move_photos.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>mover/tests.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>mover/urls.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
 				<integer>7</integer>
-				<key>line</key>
-				<integer>28</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/tests.py</key>
+		<key>mover/verify.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>mover/views.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>46</integer>
+				<key>line</key>
+				<integer>4</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>templates/mover/index.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>31</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>urls.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -196,70 +270,45 @@
 				<key>line</key>
 				<integer>0</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/verify.py</key>
-		<dict>
-			<key>caret</key>
+			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>82</integer>
+				<integer>60</integer>
 				<key>line</key>
-				<integer>34</integer>
+				<integer>0</integer>
 			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>6</integer>
-		</dict>
-		<key>Working/Programming/Python/fotki2picasa/mover/views.py</key>
-		<dict>
-			<key>caret</key>
+			<key>selectTo</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
 				<integer>0</integer>
 			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>Working/Programming/Python/fotki2picasa/urls.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>Working/Programming/Python/fotki2picasa/urls.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/views.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/verify.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/tests.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/templates/main.html</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/move_photos.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/models.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/main.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/login_yandex.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/login_google.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/index.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/data.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/common.py</string>
-		<string>Working/Programming/Python/fotki2picasa/mover/__init__.py</string>
+		<string>urls.py</string>
+		<string>mover/urls.py</string>
+		<string>mover/views.py</string>
+		<string>templates/mover/index.html</string>
+		<string>mover/verify.py</string>
+		<string>mover/tests.py</string>
+		<string>mover/move_photos.py</string>
+		<string>mover/models.py</string>
+		<string>mover/main.py</string>
+		<string>mover/login_yandex.py</string>
+		<string>mover/login_google.py</string>
+		<string>mover/index.py</string>
+		<string>mover/data.py</string>
+		<string>mover/common.py</string>
+		<string>mover/__init__.py</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
