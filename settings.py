@@ -1,24 +1,23 @@
-# Django settings for fotki2picasa project.
+# Initialize App Engine and import the default settings (DB backend, etc.).
+# If you want to use a different backend you have to remove all occurences
+# of "djangoappengine" from this file.
+from djangoappengine.settings_base import *
+
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-	# ('Your Name', 'your_email@example.com'),
+	('Denis Parchenko', 'tmp_account@hotbox.ru'),
 )
 
 MANAGERS = ADMINS
 
-DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-		'NAME': '',						 # Or path to database file if using sqlite3.
-		'USER': '',						 # Not used with sqlite3.
-		'PASSWORD': '',					 # Not used with sqlite3.
-		'HOST': '',						 # Set to empty string for localhost. Not used with sqlite3.
-		'PORT': '',						 # Set to empty string for default. Not used with sqlite3.
-	}
-}
+# Activate django-dbindexer for the default database
+DATABASES['native'] = DATABASES['default']
+DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': 'native'}
+AUTOLOAD_SITECONF = 'indexes'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -60,12 +59,12 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+STATIC_URL = '/media/'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -92,7 +91,16 @@ TEMPLATE_LOADERS = (
 #	  'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+	'django.contrib.auth.context_processors.auth',
+	'django.core.context_processors.request',
+	'django.core.context_processors.media',
+)
+
 MIDDLEWARE_CLASSES = (
+	# This loads the index definitions, so it has to come first
+	'autoload.middleware.AutoloadMiddleware',
+
 	'django.middleware.common.CommonMiddleware',
 	'django.contrib.sessions.middleware.SessionMiddleware',
 	'django.middleware.csrf.CsrfViewMiddleware',
@@ -106,18 +114,25 @@ TEMPLATE_DIRS = (
 	# Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
 	# Always use forward slashes, even on Windows.
 	# Don't forget to use absolute paths, not relative paths.
+	os.path.join(os.path.dirname(__file__), 'templates')
 )
 
 INSTALLED_APPS = (
 	'django.contrib.auth',
 	'django.contrib.contenttypes',
 	'django.contrib.sessions',
-	'django.contrib.sites',
+	#'django.contrib.sites',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'django.contrib.admin',
 	# Uncomment the next line to enable admin documentation:
 	# 'django.contrib.admindocs',
+	'djangotoolbox',
+	'autoload',
+	'dbindexer',
+
+	# djangoappengine should come last, so it can override a few manage.py commands
+	'djangoappengine',
 )
 
 AUTH_PROFILE_MODULE = 'mover.UserProfile'
