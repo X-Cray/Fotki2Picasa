@@ -1,4 +1,4 @@
-
+from django.shortcuts import *
 
 # Home page view.
 def index(request):
