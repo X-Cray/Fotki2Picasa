@@ -16,6 +16,9 @@ class UserProfile(models.Model):
 	yandex_secret = models.CharField(max_length=100)
 	google_token = models.CharField(max_length=100)
 	google_secret = models.CharField(max_length=100)
+	
+	def __unicode__(self):
+		return self.user.username
 
 class MoveArrangement(models.Model):
 	user = models.ForeignKey(User)
