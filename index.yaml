@@ -16,6 +16,11 @@ indexes:
   - name: action_time
     direction: desc
 
+- kind: mover_movearrangement
+  properties:
+  - name: __key__
+    direction: desc
+
 - kind: mover_userprofile
   properties:
   - name: __key__

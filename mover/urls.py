@@ -1,7 +1,9 @@
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('',
-	(r'^$', 'mover.views.index'),
-	(r'^/login-yandex$', 'mover.views.login_yandex'),
-	(r'^/login-google$', 'mover.views.login_google')
+urlpatterns = patterns('mover.views',
+	(r'^$', 'index'),
+	(r'^login-yandex/$', 'login_yandex'),
+	(r'^login-google/$', 'login_google'),
+	(r'^verify-yandex/$', 'verify_yandex'),
+	(r'^verify-google/$', 'verify_google')
 )
