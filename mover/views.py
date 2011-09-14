@@ -50,11 +50,12 @@ def verify_yandex(request):
 					existing_user = User.objects.get(username__exact=username)
 				except User.DoesNotExist:
 					existing_user = User.objects.create_user(username, 'temp@fotki2picasa.appspot.com', 'password')
-				
-				existing_user.profile.yandex_token = data['access_token']
-				existing_user.profile.yandex_name = username
-				existing_user.profile.yandex_picture = userpic
-				existing_user.profile.save()
+
+				existing_profile = existing_user.profile
+				existing_profile.yandex_token = data['access_token']
+				existing_profile.yandex_name = username
+				existing_profile.yandex_picture = userpic
+				existing_profile.save()
 
 				#logging.debug('Profile: %s, %s, %s, %s' % (data['access_token'], username, userpic, person))
 

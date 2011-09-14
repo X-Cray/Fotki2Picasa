@@ -6,15 +6,15 @@ class UserProfile(models.Model):
 	user = models.ForeignKey(User, unique=True)
 
 	# User names and avatars.
-	yandex_name = models.TextField()
-	yandex_picture = models.TextField()
-	google_name = models.TextField()
-	google_picture = models.TextField()
+	yandex_name = models.CharField(max_length=100, blank=True)
+	yandex_picture = models.CharField(max_length=200, blank=True)
+	google_name = models.CharField(max_length=100, blank=True)
+	google_picture = models.CharField(max_length=200, blank=True)
 
 	# Authentication tokens.
-	yandex_token = models.TextField()
-	google_token = models.TextField()
-	google_secret = models.TextField()
+	yandex_token = models.CharField(max_length=100, blank=True)
+	google_token = models.CharField(max_length=100, blank=True)
+	google_secret = models.CharField(max_length=100, blank=True)
 	
 	def __unicode__(self):
 		return self.user.username
