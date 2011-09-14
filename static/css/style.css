@@ -20,18 +20,18 @@ body
 	color: white;
 }
 
-#avatar
+.avatar
 {
 	float: left;
 }
 
-#greeting
+.greeting
 {
 	float: left;
 	padding: 10px;
 }
 
-#actions
+.actions
 {
 	clear: both;
 	padding-top: 15px;

@@ -8,14 +8,24 @@
   </head>
   <body>
 	<div class="centered">
-		{% if user_profile %}
+		{% if profile and profile.yandex_name %}
 		<div>
-			<div id="avatar"><img src="{{ user_profile.picture }}"></div>
-			<div id="greeting">Hello {{ user_profile.name }}</div>
+			<div class="avatar"><img src="{{ profile.yandex_picture }}" /></div>
+			<div class="greeting">Hello {{ profile.yandex_name }}</div>
 		</div>
 		{% else %}
-		<div id="actions">
+		<div class="actions">
 			<div><a href="/login-yandex">Sign in with Yandex</a></div>
+		</div>
+		{% endif %}
+		
+		{% if profile and profile.google_name %}
+		<div>
+			<div class="avatar"><img src="{{ profile.google_picture }}" /></div>
+			<div class="greeting">Hello {{ profile.google_name }}</div>
+		</div>
+		{% else %}
+		<div class="actions">
 			<div><a href="/login-google">Sign in with Google</a></div>
 		</div>
 		{% endif %}

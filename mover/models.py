@@ -3,23 +3,23 @@ from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
 	# This field is required.
-	user = models.OneToOneField(User)
+	user = models.ForeignKey(User, unique=True)
 
 	# User names and avatars.
-	yandex_name = models.CharField(max_length=100)
-	yandex_picture = models.CharField(max_length=200)
-	google_name = models.CharField(max_length=100)
-	google_picture = models.CharField(max_length=200)
+	yandex_name = models.TextField()
+	yandex_picture = models.TextField()
+	google_name = models.TextField()
+	google_picture = models.TextField()
 
 	# Authentication tokens.
-	yandex_token = models.CharField(max_length=100)
-	yandex_secret = models.CharField(max_length=100)
-	google_token = models.CharField(max_length=100)
-	google_secret = models.CharField(max_length=100)
+	yandex_token = models.TextField()
+	google_token = models.TextField()
+	google_secret = models.TextField()
 	
 	def __unicode__(self):
 		return self.user.username
 
+User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+
 class MoveArrangement(models.Model):
 	user = models.ForeignKey(User)
-
