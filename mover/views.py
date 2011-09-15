@@ -57,28 +57,12 @@ def verify_yandex(request):
 				existing_profile.yandex_picture = userpic
 				existing_profile.save()
 
-				#logging.debug('Profile: %s, %s, %s, %s' % (data['access_token'], username, userpic, person))
-
 				existing_user.backend = 'django.contrib.auth.backends.ModelBackend'
 				login(request, existing_user)
 			else:
 				logging.error('Yandex have not returned the access token: %s' % result.content)
 		else:
 			logging.error('Yandex token request error: %d' % result.status_code)
-
-	#auth_token = request.get('oauth_token')
-	#auth_verifier = request.get('oauth_verifier')
-
-	#		session = Session(writer='cookie')
-	#		session['username'] = user_info['username']
-
-	#		user = UserInfo.get_or_insert(user_info['username'])
-	#		user.name = user_info['name']
-	#		user.picture = user_info['picture']
-	#		user.token = user_info['token']
-	#		user.secret = user_info['secret']
-
-	#		user.save()
 	
 	return redirect('/')
 
